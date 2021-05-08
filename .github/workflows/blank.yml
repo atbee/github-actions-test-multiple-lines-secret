@@ -10,9 +10,8 @@ jobs:
 
     steps:
       - name: Display multiple lines secret
-        shell: bash
         env:
           MULTIPLE_LINES: ${{ secrets.MULTIPLE_LINES }}
         run: |
-          echo "atb $MULTIPLE_LINES" > test_file
+          echo "$MULTIPLE_LINES" > test_file
           cat test_file
