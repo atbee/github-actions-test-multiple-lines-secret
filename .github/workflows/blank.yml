@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display multiple lines secret
+        run: echo ${{ secrets.MULTIPLE_LINES }}
