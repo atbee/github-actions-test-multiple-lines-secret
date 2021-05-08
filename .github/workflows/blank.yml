@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Display multiple lines secret
         run: |
-          echo "atb"
+          echo "atb" >> test_file
+          cat test_file
