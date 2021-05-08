@@ -11,5 +11,6 @@ jobs:
     steps:
       - name: Display multiple lines secret
         run: |
+          echo "atb" > test_file
           echo ${{ secrets.MULTIPLE_LINES }} >> test_file
           cat test_file
