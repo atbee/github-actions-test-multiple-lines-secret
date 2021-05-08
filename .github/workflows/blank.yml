@@ -10,4 +10,6 @@ jobs:
 
     steps:
       - name: Display multiple lines secret
-        run: echo ${{ secrets.MULTIPLE_LINES }}
+        run: |
+          echo ${{ secrets.MULTIPLE_LINES }} >> test
+          cat test
